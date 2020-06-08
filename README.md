@@ -1,5 +1,5 @@
 # on_air
-Code for a Raspberry PI Zero powered on air indicator - a new essential for working at home!  Uses IFTHISTHENTHAT, Adafruit IO and a Pimoroni Unicorn PHAT.
+Code for a Raspberry PI Zero W powered on air indicator - a new essential for working at home!  Uses IFTHISTHENTHAT, Adafruit IO and a Pimoroni Unicorn PHAT.
 
 Pre-requisites:
 Set up the Pimoroni Unicorn library as per instructions here:
@@ -18,3 +18,5 @@ How it works:
  * The Python script running on the Pi Zero then monitors that feed and sets RGB values according to the state, then outputs that to the Unicorn PHAT.
  
 Dead simple, and means I can change the state with one button press on my phone so easily done while on a video call without losing the track of the call.
+
+Note - you need to run the code as root (so sudo python on_air.py from the terminal) - this is a requirement for the Unicorn library.  I have this set up to run automatically as soon as the Pi starts using the cron method here:  https://www.raspberrypi-spy.co.uk/2013/07/running-a-python-script-at-boot-using-cron/ .
