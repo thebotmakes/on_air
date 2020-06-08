@@ -1,10 +1,10 @@
 import time
 import unicornhat as unicorn
 from Adafruit_IO import Client, RequestError, Feed
-ADAFRUIT_IO_KEY = 'f89c40192b744bffadc0278127960b06'
-ADAFRUIT_IO_USERNAME = 'thebot'
+ADAFRUIT_IO_KEY = 'YOUR_IO_KEY'. # see the yellow 'Adafruit IO Key' link on the top left of the IO dashboard
+ADAFRUIT_IO_USERNAME = 'YOUR_IO_USERNAME' # as above 
 aio = Client(ADAFRUIT_IO_USERNAME, ADAFRUIT_IO_KEY)
-feed = aio.feeds('on-air')
+feed = aio.feeds('YOUR_FEED_NAME') # swap your_feed_name for whatever your IO feed is called
 while True:
     state = aio.receive(feed.key)
     print(state.value)
